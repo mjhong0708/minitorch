@@ -1,18 +1,20 @@
-import minitorch
 import random
-from minitorch import grad_check
+
+import numba
 import pytest
 from hypothesis import given, settings
-import numba
-from hypothesis.strategies import integers, lists, data, permutations
+from hypothesis.strategies import data, integers, lists, permutations
+
+import minitorch
+from minitorch import MathTestVariable, grad_check
+
 from .strategies import (
-    tensors,
-    shaped_tensors,
     assert_close,
     assert_close_tensor,
+    shaped_tensors,
     small_floats,
+    tensors,
 )
-from minitorch import MathTestVariable
 
 one_arg, two_arg, red_arg = MathTestVariable._tests()
 

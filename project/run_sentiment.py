@@ -1,7 +1,9 @@
-import minitorch
-from datasets import load_dataset
-import embeddings
 import random
+
+import embeddings
+from datasets import load_dataset
+
+import minitorch
 
 BACKEND = minitorch.make_tensor_backend(minitorch.FastOps)
 
@@ -71,7 +73,7 @@ class CNNSentimentKim(minitorch.Module):
 
     def forward(self, embeddings):
         """
-            embeddings tensor: [batch x sentence length x embedding dim]
+        embeddings tensor: [batch x sentence length x embedding dim]
         """
         # ASSIGN4.5
         # permute embedding dim to input channels dim for conv layer
@@ -186,8 +188,14 @@ class SentenceSentimentTrain:
             if data_val is not None:
                 (X_val, y_val) = data_val
                 model.eval()
-                y = minitorch.tensor(y_val, backend=BACKEND,)
-                x = minitorch.tensor(X_val, backend=BACKEND,)
+                y = minitorch.tensor(
+                    y_val,
+                    backend=BACKEND,
+                )
+                x = minitorch.tensor(
+                    X_val,
+                    backend=BACKEND,
+                )
                 out = model.forward(x)
                 validation_predictions += get_predictions_array(y, out)
                 validation_accuracy.append(get_accuracy(validation_predictions))

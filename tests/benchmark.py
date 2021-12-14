@@ -1,5 +1,6 @@
-import minitorch
 import time
+
+import minitorch
 
 backend = minitorch.make_tensor_backend(minitorch.CudaOps, is_cuda=True)
 # backend = minitorch.make_tensor_backend(minitorch.FastOps, is_cuda=False)

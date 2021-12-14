@@ -3,12 +3,14 @@ Implementation of the autodifferentiation Functions for Tensor.
 """
 
 
-from .autodiff import FunctionBase
-from .tensor_ops import TensorOps
-import numpy as np
-from . import operators
-from .tensor import Tensor
 import random
+
+import numpy as np
+
+from . import operators
+from .autodiff import FunctionBase
+from .tensor import Tensor
+from .tensor_ops import TensorOps
 
 
 # Constructors
@@ -98,56 +100,56 @@ def make_tensor_backend(tensor_ops, is_cuda=False):
             @staticmethod
             def forward(ctx, a, b):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class Sigmoid(Function):
             @staticmethod
             def forward(ctx, a):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class ReLU(Function):
             @staticmethod
             def forward(ctx, a):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class Log(Function):
             @staticmethod
             def forward(ctx, a):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class Exp(Function):
             @staticmethod
             def forward(ctx, a):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class Sum(Function):
             @staticmethod
@@ -184,40 +186,40 @@ def make_tensor_backend(tensor_ops, is_cuda=False):
             @staticmethod
             def forward(ctx, a, b):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class EQ(Function):
             @staticmethod
             def forward(ctx, a, b):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class IsClose(Function):
             @staticmethod
             def forward(ctx, a, b):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
         class Permute(Function):
             @staticmethod
             def forward(ctx, a, order):
                 # TODO: Implement for Task 2.3.
-                raise NotImplementedError('Need to implement for Task 2.3')
+                raise NotImplementedError("Need to implement for Task 2.3")
 
             @staticmethod
             def backward(ctx, grad_output):
                 # TODO: Implement for Task 2.4.
-                raise NotImplementedError('Need to implement for Task 2.4')
+                raise NotImplementedError("Need to implement for Task 2.4")
 
         class View(Function):
             @staticmethod

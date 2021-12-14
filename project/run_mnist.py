@@ -1,7 +1,8 @@
-from mnist import MNIST
-import minitorch
-import visdom
 import numpy
+import visdom
+from mnist import MNIST
+
+import minitorch
 
 vis = visdom.Visdom()
 mndata = MNIST("data/")
@@ -44,10 +45,13 @@ class MMLinear(minitorch.Module):
     def forward(self, x):
         # ASSIGN3.5
         batch, in_size = x.shape
-        return minitorch.matmul(
-            x.view(batch, 1, in_size),
-            self.weights.value.view(1, in_size, self.out_size),
-        ).view(batch, self.out_size) + self.bias.value.view(1, self.out_size)
+        return (
+            minitorch.matmul(
+                x.view(batch, 1, in_size),
+                self.weights.value.view(1, in_size, self.out_size),
+            ).view(batch, self.out_size)
+            + self.bias.value.view(1, self.out_size)
+        )
         # END ASSIGN3.5
 
 

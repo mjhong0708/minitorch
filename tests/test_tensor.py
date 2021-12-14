@@ -1,9 +1,10 @@
-from minitorch import grad_check, tensor
 import pytest
 from hypothesis import given
-from hypothesis.strategies import lists, data, permutations
-from .strategies import tensors, shaped_tensors, assert_close, small_floats
-from minitorch import MathTestVariable
+from hypothesis.strategies import data, lists, permutations
+
+from minitorch import MathTestVariable, grad_check, tensor
+
+from .strategies import assert_close, shaped_tensors, small_floats, tensors
 
 one_arg, two_arg, red_arg = MathTestVariable._tests()
 

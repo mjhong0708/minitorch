@@ -1,8 +1,11 @@
+import random
+
 from hypothesis import given
 from hypothesis.strategies import integers, lists
-from .strategies import scalars
-import random
+
 import minitorch
+
+from .strategies import scalars
 
 
 class Network(minitorch.Module):

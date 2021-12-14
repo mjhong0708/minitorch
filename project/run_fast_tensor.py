@@ -1,7 +1,9 @@
-import minitorch
+import random
+
 import datasets
 import numba
-import random
+
+import minitorch
 
 FastTensorBackend = minitorch.make_tensor_backend(minitorch.FastOps)
 if numba.cuda.is_available():

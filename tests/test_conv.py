@@ -1,7 +1,9 @@
-import minitorch
-from hypothesis import given, settings
-from .strategies import tensors
 import pytest
+from hypothesis import given, settings
+
+import minitorch
+
+from .strategies import tensors
 
 
 @pytest.mark.task4_1

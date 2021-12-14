@@ -1,8 +1,10 @@
-import minitorch
+import pytest
 from hypothesis import given
 from hypothesis.strategies import data
-from .strategies import tensor_data, indices
-import pytest
+
+import minitorch
+
+from .strategies import indices, tensor_data
 
 # ## Tasks 2.1
 
